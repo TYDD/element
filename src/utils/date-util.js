@@ -267,8 +267,18 @@ export const prevYear = function(date, amount = 1) {
   const month = date.getMonth();
   return changeYearMonthAndClampDate(date, year - amount, month);
 };
+export const prevTenYear = function(date, amount = 10) {
+  const year = date.getFullYear();
+  const month = date.getMonth();
+  return changeYearMonthAndClampDate(date, year - amount, month);
+};
 
 export const nextYear = function(date, amount = 1) {
+  const year = date.getFullYear();
+  const month = date.getMonth();
+  return changeYearMonthAndClampDate(date, year + amount, month);
+};
+export const nextTenYear = function(date, amount = 10) {
   const year = date.getFullYear();
   const month = date.getMonth();
   return changeYearMonthAndClampDate(date, year + amount, month);
